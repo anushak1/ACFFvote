@@ -275,39 +275,8 @@ footer {
 
 </head>
 
-<!--<body> 
-<div class="container">
-  <div class="form-group">
-		<h4>Enter Access Code: </h4> <input type = "text"  id= "pwd" required >
-		<br><br>
-		<button id= "button" onClick= "checkCode()"> Submit </button> 
 
-		-->
-	<script>
-	function checkCode(){
-		var adminCode = "0000";
-		var userCode ="1212"
-		//var accessCode = {"code":"code"};
-		var code = document.getElementById("pwd").value;
-		
-		
-		if (code== adminCode){
-			window.location.href = "adminPage.html";
-		}
-		else if(code == userCode){ // if code in dictionary
-			//accessCode.push(code);
-			window.location.href = "votingimportanceemail.html";
-			//go to login page	
-		}
-		
-		else{ //if code not in dict
-			alert("That access code is not valid. Your access code should be on the back of your ticket!");
-			
-			
-		}
-	}
-
-	</script>
+	
 	</div>
 </div>
   <!-- Header -->
@@ -322,7 +291,7 @@ footer {
 				<button id= "button" onClick= "checkCode()"> Submit </button> 
 			</div>
 			</div>
-   <script src = "nameCode.js"></script>
+    <script src = "nameCode.js"></script>
 
   <p class="sp">Would You Like to use VoteTek for Your Next Event? <a target="_blank" href="sign_up_organization.html">Click Here To Sign Up!</a></p>
     </header>
