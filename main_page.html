@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!display for main page>
 <html lang="en">
 
 <head>
@@ -10,14 +9,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>VoteTek</title>
+    <title>Vote Tek</title>
 
-    <!-- Bootstrap Core CSS for everything -->
+    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-	
-	<!-- Custom CSS for main page -->
+
+    <!-- Custom CSS -->
     <style>
-	html,
+/*!
+ * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+html,
 body {
     width: 100%;
     height: 100%;
@@ -166,7 +173,7 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url("hands.jpg") no-repeat center center scroll;
+    background: url(https://pixabay.com/static/uploads/photo/2013/11/28/11/28/hands-220163_640.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -254,7 +261,6 @@ footer {
 }
 </style>
 
-
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
@@ -269,7 +275,39 @@ footer {
 
 </head>
 
-<body> 
+<!--<body> 
+<div class="container">
+  <div class="form-group">
+		<h4>Enter Access Code: </h4> <input type = "text"  id= "pwd" required >
+		<br><br>
+		<button id= "button" onClick= "checkCode()"> Submit </button> 
+
+		-->
+	<script>
+	function checkCode(){
+		var adminCode = "0000";
+		var userCode ="1212"
+		//var accessCode = {"code":"code"};
+		var code = document.getElementById("pwd").value;
+		
+		
+		if (code== adminCode){
+			window.location.href = "adminPage.html";
+		}
+		else if(code == userCode){ // if code in dictionary
+			//accessCode.push(code);
+			window.location.href = "votingimportanceemail.html";
+			//go to login page	
+		}
+		
+		else{ //if code not in dict
+			alert("That access code is not valid. Your access code should be on the back of your ticket!");
+			
+			
+		}
+	}
+
+	</script>
 	</div>
 </div>
   <!-- Header -->
@@ -279,18 +317,14 @@ footer {
 			
 			<div class="container">
 			<div class="form-group">
-				
-		Please Enter Your First and Last Name: <input type = "text"  id= "aCode" required > <!--creates text box to put access code into-->
-		<br><br>
-		<button id= "button" onClick= "checkCode()"> Submit </button> <!--creates button to submit info and calls checkCode function (defined below) -->
-
-		<script src= "nameCode.js"></script>
-	
+				<h4>Please Enter Your First and Last Name: </h4> <input type = "text"  id= "aCode" required >
+				<br><br>
+				<button id= "button" onClick= "checkCode()"> Submit </button> 
 			</div>
 			</div>
-   
+   <script src = "nameCode.js"></script>
 
-  <p class="sp"> <a target="_blank" href="sign_up_organization.html">Would You Like to use VoteTek for Your Next Event?</a></p>
+  <p class="sp">Would You Like to use VoteTek for Your Next Event? <a target="_blank" href="sign_up_organization.html">Click Here To Sign Up!</a></p>
     </header>
 	
 	 
